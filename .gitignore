@@ -1,0 +1,33 @@
+# Build output directories
+bin/
+obj/
+
+# Visual Studio specific files
+.vs/
+*.suo
+*.user
+*.vcxproj.*
+*.pdb
+*.ipch
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+
+# Other common files to ignore
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# Documentation generation files - ignore the _site, api, and verbose files inside docfx
+src/docfx/_site/
+src/docfx/api/
+src/docfx/verbose
+
+# Specific to this project
+Configuration/  # If these are generated or can be recreated
