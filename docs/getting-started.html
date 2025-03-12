@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting Started with BTCWalletLibrary | BtcWalletLibrary </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting Started with BTCWalletLibrary | BtcWalletLibrary ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/docfx/docs/getting-started.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BtcWalletLibrary">
+            BtcWalletLibrary
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="getting-started-with-btcwalletlibrary" sourcefile="docs/getting-started.md" sourcestartlinenumber="1">Getting Started with BTCWalletLibrary</h1>
+
+<h2 id="prerequisites" sourcefile="docs/getting-started.md" sourcestartlinenumber="3">Prerequisites</h2>
+<ul sourcefile="docs/getting-started.md" sourcestartlinenumber="4">
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="4"><a href="https://dotnet.microsoft.com/download" sourcefile="docs/getting-started.md" sourcestartlinenumber="4">.NET Standard 2.0+ SDK</a></li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="5">Basic knowledge of <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection" sourcefile="docs/getting-started.md" sourcestartlinenumber="5">Dependency Injection</a> in .NET</li>
+</ul>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="7">
+<h2 id="step-1-install-nuget-package" sourcefile="docs/getting-started.md" sourcestartlinenumber="9">Step 1: Install NuGet Package</h2>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="10">Install the BTCWalletLibrary NuGet package in your .NET project:</p>
+<pre><code class="lang-bash" sourcefile="docs/getting-started.md" sourcestartlinenumber="11">dotnet add package BtcWalletLibrary
+</code></pre>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="15">
+<h2 id="step-2-configure-settings" sourcefile="docs/getting-started.md" sourcestartlinenumber="17">Step 2: Configure Settings</h2>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="18">Create an <code sourcefile="docs/getting-started.md" sourcestartlinenumber="18">appsettings.json</code> file in your project root, example file:</p>
+<pre><code class="lang-json" sourcefile="docs/getting-started.md" sourcestartlinenumber="19">{
+  &quot;CryptoWalletLibrary&quot;: {
+    &quot;NodeConfiguration&quot;: {
+      &quot;Url&quot;: &quot;testnet.aranguren.org&quot;,
+      &quot;Port&quot;: 51001,
+      &quot;UseSSL&quot;: false,
+      &quot;Network&quot;: &quot;TestNet&quot;,
+      &quot;MaxRangeEmptyAddr&quot;: 2
+    },
+    &quot;BlockchainTxFeeApi&quot;: {
+      &quot;BaseUrl&quot;: &quot;https://api.blockchain.info&quot;,
+      &quot;FeePath&quot;: &quot;/mempool/fees&quot;
+    }
+  }
+}
+
+</code></pre>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="37"><strong sourcefile="docs/getting-started.md" sourcestartlinenumber="37">Note:</strong> Set the file's <strong sourcefile="docs/getting-started.md" sourcestartlinenumber="37">Copy to Output Directory</strong> property to <code sourcefile="docs/getting-started.md" sourcestartlinenumber="37">Copy Always</code>.</p>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="39">
+<h2 id="step-3-initialize-the-library" sourcefile="docs/getting-started.md" sourcestartlinenumber="41">Step 3: Initialize the Library</h2>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="42">Configure the library using Microsoft.Extensions.DependencyInjection:</p>
+<pre><code class="lang-csharp" sourcefile="docs/getting-started.md" sourcestartlinenumber="44">
+// Build configuration
+var configuration = new ConfigurationBuilder()
+    .AddJsonFile(&quot;appsettings.json&quot;, optional: false, reloadOnChange: true)
+    .Build();
+
+// Configure wallet library config
+services.Configure&lt;WalletConfig&gt;(configuration.GetSection(&quot;CryptoWalletLibrary&quot;));
+
+// Setup dependency injection
+var services = new ServiceCollection();
+
+// Configure logging (Serilog shown here as example)
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Verbose()
+    .WriteTo.Console()
+    .CreateLogger();
+services.AddSingleton&lt;ILoggingService, SerilogLoggingService&gt;();
+
+
+// Initialize with test mnemonic for demo purposes (replace with secure key management in production)
+const string testMnemonic = 
+    &quot;asthma attend bus original science leaf deputy nuclear ticket valley vacuum tornado&quot;;
+services.AddBtcWalletLibraryServices(testMnemonic);
+
+// Build service provider
+var serviceProvider = services.BuildServiceProvider();
+</code></pre>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="74">
+<h2 id="demo-app" sourcefile="docs/getting-started.md" sourcestartlinenumber="76">Demo App</h2>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="77">Example usage in simple UI application:</p>
+<p sourcefile="docs/getting-started.md" sourcestartlinenumber="79">link: <a href="https://github.com/ramazan199/BtcWalletUI" sourcefile="docs/getting-started.md" sourcestartlinenumber="79">https://github.com/ramazan199/BtcWalletUI</a></p>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="81">
+<h2 id="implementation-notes" sourcefile="docs/getting-started.md" sourcestartlinenumber="83">Implementation Notes</h2>
+<ul sourcefile="docs/getting-started.md" sourcestartlinenumber="84">
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="84">The example uses:
+<ul sourcefile="docs/getting-started.md" sourcestartlinenumber="85">
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="85"><code sourcefile="docs/getting-started.md" sourcestartlinenumber="85">Microsoft.Extensions.DependencyInjection</code> for DI</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="86"><code sourcefile="docs/getting-started.md" sourcestartlinenumber="86">Serilog</code> for logging (optional)</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="87">.NET's built-in configuration system</li>
+</ul>
+</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="88">Works in any .NET Standard 2.0+ compatible project:
+<ul sourcefile="docs/getting-started.md" sourcestartlinenumber="89">
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="89">Console apps</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="90">ASP.NET Core services</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="91">Desktop applications</li>
+<li sourcefile="docs/getting-started.md" sourcestartlinenumber="92">Mobile apps (via .NET MAUI/Xamarin)</li>
+</ul>
+</li>
+</ul>
+<hr sourcefile="docs/getting-started.md" sourcestartlinenumber="94">
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/docfx/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

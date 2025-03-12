@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ITxHistoryService | BtcWalletLibrary </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITxHistoryService | BtcWalletLibrary ">
+      
+      <meta name="description" content="Interface for services responsible for managing and synchronizing the wallet&#39;s transaction history. This service provides access to the list of transactions and functionality to synchronize transaction history with the blockchain.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ramazan199/BtcWalletLibrary/new/master/apiSpec/new?filename=BtcWalletLibrary_Interfaces_ITxHistoryService.md&amp;value=---%0Auid%3A%20BtcWalletLibrary.Interfaces.ITxHistoryService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BtcWalletLibrary">
+            BtcWalletLibrary
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService">
+
+
+
+  <h1 id="BtcWalletLibrary_Interfaces_ITxHistoryService" data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService" class="text-break">
+Interface ITxHistoryService  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxHistoryService.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BtcWalletLibrary.html">BtcWalletLibrary</a>.<a class="xref" href="BtcWalletLibrary.Interfaces.html">Interfaces</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BtcWalletLibrary.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="1">Interface for services responsible for managing and synchronizing the wallet's transaction history.
+This service provides access to the list of transactions and functionality to synchronize transaction history with the blockchain.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITxHistoryService</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxHistoryService_Transactions_" data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService.Transactions*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxHistoryService_Transactions" data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService.Transactions">
+  Transactions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxHistoryService.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="1">Gets the list of transactions currently stored in the wallet's history.
+This list is updated during synchronization operations. Note that during transaction fetching, individual transactions and updates are published in real-time via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a>, not directly through this property for immediate consumption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;Transaction&gt; Transactions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BtcWalletLibrary.Models.Transaction.html">Transaction</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxHistoryService_SyncTransactionsAsync_" data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService.SyncTransactionsAsync*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxHistoryService_SyncTransactionsAsync" data-uid="BtcWalletLibrary.Interfaces.ITxHistoryService.SyncTransactionsAsync">
+  SyncTransactionsAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxHistoryService.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="1">Asynchronously synchronizes the wallet's transaction history with the blockchain (for main and change addresses).
+During synchronization, new transactions related to the wallet's addresses are fetched and added to the history.</p>
+<p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="4"><strong sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="4">Real-time Updates via Events:</strong>
+As the synchronization process runs, the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> publishes the following events to provide real-time updates and process lifecycle notifications:</p>
+<ul><li><a class="xref" href="BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.html">FetchingStartedEventArgs</a>:  Published when the transaction fetching process begins.</li><li><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.html">TransactionAddedEventArgs</a>: For each newly discovered transaction.</li><li><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.html">TransactionConfirmedEventArgs</a>: When a transaction reaches a confirmation threshold.</li><li><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.html">TransactionDateUpdatedEventArgs</a>: If a transaction's date information is updated.</li><li><a class="xref" href="BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.html">FetchingCompletedEventArgs</a>: Published when the entire transaction fetching and synchronization process is complete.</li></ul>
+<p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="8">These events allow subscribers to receive immediate notifications of transaction activity and the overall synchronization status.
+The <a class="xref" href="BtcWalletLibrary.Interfaces.ITxHistoryService.html#BtcWalletLibrary_Interfaces_ITxHistoryService_Transactions">Transactions</a> property provides access to the complete, synchronized transaction history <em sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="9">after</em> the synchronization process finishes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;TransactionFetchResult&gt; SyncTransactionsAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BtcWalletLibrary.DTOs.Responses.TransactionFetchResult.html">TransactionFetchResult</a>&gt;</dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml" sourcestartlinenumber="1">A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task&lt;TResult&gt;</a> representing the asynchronous operation.
+The task result contains a <a class="xref" href="BtcWalletLibrary.DTOs.Responses.TransactionFetchResult.html">TransactionFetchResult</a> indicating whether the synchronization process encountered network errors.
+To access the updated list of transactions after synchronization, use the <a class="xref" href="BtcWalletLibrary.Interfaces.ITxHistoryService.html#BtcWalletLibrary_Interfaces_ITxHistoryService_Transactions">Transactions</a> property.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxHistoryService.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

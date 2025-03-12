@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Introduction | BtcWalletLibrary </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Introduction | BtcWalletLibrary ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/docfx/docs/introduction.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BtcWalletLibrary">
+            BtcWalletLibrary
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="introduction" sourcefile="docs/introduction.md" sourcestartlinenumber="1">Introduction</h1>
+
+<p sourcefile="docs/introduction.md" sourcestartlinenumber="3">BtcWalletLibrary is a C# library designed to simplify Bitcoin wallet development. It abstracts away all transaction-handling complexities, allowing developers to focus solely on UI customization. With BtcWalletLibrary, you don't need to manage address derivation,  getting user's transaction history, or fund transfers—everything is handled for you. Just integrate the library, and your wallet is ready to go with minimal effort.</p>
+<h2 id="key-features" sourcefile="docs/introduction.md" sourcestartlinenumber="5">Key Features</h2>
+<ul sourcefile="docs/introduction.md" sourcestartlinenumber="6">
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="6">Automatic address and transaction management</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="7">Built-in support for fetching transaction history</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="8">Simplified fund transfers and fee estimation</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="9">Event-driven architecture for real-time updates</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="10">Customizable UI while handling all backend logic automatically</li>
+</ul>
+<h2 id="key-principles" sourcefile="docs/introduction.md" sourcestartlinenumber="12">Key Principles</h2>
+<p sourcefile="docs/introduction.md" sourcestartlinenumber="14">BtcWalletLibrary is built with the following key principles in mind:</p>
+<ul sourcefile="docs/introduction.md" sourcestartlinenumber="16">
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="16"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="16">Abstraction:</strong> It abstracts away the complexities of Bitcoin protocol details and low-level cryptography, allowing developers to focus on the core logic of their wallet applications.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="17"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="17">Modularity:</strong> The library is designed with a modular architecture, making it easy to integrate specific components into your projects and customize functionality as needed.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="18"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="18">Event-Driven:</strong> The library leverages an event-driven architecture, enabling real-time updates and reactive UI development through events like transaction fetches, transaction broadcasts, confirmations, and balance changes.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="19"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="19">Extensibility:</strong> Designed to be extensible, the library allows developers to integrate with different Bitcoin network providers, storage mechanisms, and UI frameworks.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="20"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="20">DI Container Agnostic:</strong> BtcWalletLibrary adopts a dependency injection (DI) container-agnostic approach using Microsoft.Extensions.DependencyInjection. This ensures that developers can choose their preferred DI container without being locked into a specific implementation.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="21"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="21">Type-Safety:</strong> Built with C# and strong typing in mind, it provides a type-safe environment, reducing runtime errors and improving code maintainability.</li>
+</ul>
+<h2 id="feature-details" sourcefile="docs/introduction.md" sourcestartlinenumber="23">Feature Details</h2>
+<p sourcefile="docs/introduction.md" sourcestartlinenumber="25">BtcWalletLibrary offers a wide range of features to accelerate your Bitcoin wallet development:</p>
+<ul sourcefile="docs/introduction.md" sourcestartlinenumber="27">
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="27"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="27">Transaction History:</strong> Fetches transaction history by querying addresses until the maximum number of empty addresses is reached (configured in the settings file). For improved user experience, addresses are queried in parallel so that newly found transactions or updated information (such as transaction confirmation status) are broadcast via events.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="28"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="28">Address Management:</strong> Generates and manages Bitcoin addresses (both main and change addresses).</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="29"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="29">Balance Tracking:</strong> Tracks wallet balances and manages UTXOs.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="30"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="30">Transaction Construction:</strong> Provides tools for building and signing Bitcoin transactions, including coin selection and fee estimation.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="31"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="31">Transaction Broadcasting:</strong> Enables broadcasting transactions to the Bitcoin network.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="32"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="32">Validation:</strong> Ensures robust input validation (addresses, amounts, and selected UTXOs) to prevent errors during transaction creation.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="33"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="33">Error Handling:</strong> Implements well-defined error handling mechanisms using custom exception classes for specific Bitcoin-related issues.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="34"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="34">Data Mapping:</strong> Efficiently maps between NBitcoin library types and internal wallet models for seamless integration.</li>
+<li sourcefile="docs/introduction.md" sourcestartlinenumber="35"><strong sourcefile="docs/introduction.md" sourcestartlinenumber="35">UTXO Management:</strong> Supports managing and selecting Unspent Transaction Outputs (UTXOs).</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/docfx/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

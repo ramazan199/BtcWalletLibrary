@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace BtcWalletLibrary.Events.Arguments | BtcWalletLibrary </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace BtcWalletLibrary.Events.Arguments | BtcWalletLibrary ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BtcWalletLibrary">
+            BtcWalletLibrary
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BtcWalletLibrary.Events.Arguments">
+
+  <h1 id="BtcWalletLibrary_Events_Arguments" data-uid="BtcWalletLibrary.Events.Arguments" class="text-break">Namespace BtcWalletLibrary.Events.Arguments</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.html">AddressTxsFetchedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when transaction fetching for a specific address is completed.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> after the wallet has finished fetching transaction history for a single Bitcoin address.
+Note that addresses are queried individually for their transaction history, such as during wallet synchronization or initial address discovery.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.html">BalanceUpdatedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when the wallet's balance is updated.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> <strong sourcefile="api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.yml" sourcestartlinenumber="2">after the wallet's balance has been recalculated.</strong>
+Balance recalculation is triggered by processing transaction fetching events, such as <a class="xref" href="BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.html">AddressTxsFetchedEventArgs</a>.
+The event is published by services like the <a class="xref" href="BtcWalletLibrary.Interfaces.IBalanceService.html">IBalanceService</a> when it has updated the wallet's balance based on new transaction data.
+Subscribers can listen for this event to update their UI or application state to reflect the latest confirmed and unconfirmed wallet balances.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.html">FetchingCompletedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when a fetching process of all addresses inside wallet is completed.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> to signal the completion of a data fetching / synchronizing  operation of the wallet transactions.
+Subscribers can listen for this event to be notified when a fetching process has finished.
+!!! Note that you need to wait for this event to be raised before sending a new transaction, to ensure that the wallet is up-to-date.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.html">FetchingStartedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when a process of  fetching all addresses inside wallet is completed.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> to signal the beginning of a data fetching / synchronizing  operation of the wallet transactions.
+Subscribers can listen for this event to be notified when a fetching process commences.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs.html">NewAddressesFoundEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs.yml" sourcestartlinenumber="1">Event arguments base class for events indicating that new addresses have been found (derived and added to the wallet's address lists).
+This is an abstract base class; concrete implementations like <a class="xref" href="BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.html">NewMainAddressesFoundEventArgs</a> and <a class="xref" href="BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.html">NewChangeAddressesFoundEventArgs</a> are used for specific address types.
+These events are published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.html">NewChangeAddressesFoundEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.yml" sourcestartlinenumber="1">Event arguments for when new change addresses have been found and added to the wallet.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a>  during initial address discovery or gap limit handling.
+Subscribers can listen for this event to be notified when the wallet expands its set of available change addresses.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.html">NewMainAddressesFoundEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.yml" sourcestartlinenumber="1">Event arguments for when new main (receiving) addresses have been found and added to the wallet.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> during initial address discovery or gap limit handling.
+Subscribers can listen for this event to be notified when the wallet expands its set of available main addresses.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.html">TransactionAddedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when a new Bitcoin transaction is added to the wallet's transaction history.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> after a new transaction is discovered or synchronized with the blockchain and added to the local storage.
+Subscribers can listen for this event to be notified of newly added transactions, enabling real-time updates to the user interface or application logic.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs.html">TransactionBroadcastedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when a transaction is successfully broadcasted to the Bitcoin network.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> after the wallet has successfully submitted a transaction to the Bitcoin network for broadcasting.
+Subscribers can listen for this event (to update UI e.g.) to be notified when a transaction initiated by the wallet is successfully sent.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.html">TransactionConfirmedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when a transaction is considered confirmed on the Bitcoin network.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> when a transaction, relevant to the wallet, reaches a certain confirmation threshold on the blockchain.
+Subscribers can listen for this event(e.g. to Update UI) to be notified when a transaction's status changes to confirmed, indicating a higher degree of security and finality.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.html">TransactionDateUpdatedEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.yml" sourcestartlinenumber="1">Event arguments for when the date of a transaction is updated in the wallet's transaction history.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> when the date associated with a transaction is updated  due to synchronization with the blockchain.
+Subscribers can listen for this event to update transaction displays or time-sensitive logic based on the corrected transaction date.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.html">TxInputAddrMarkedAsUserAddrEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="1">Event arguments for when an input address in a transaction is identified as belonging to the user's wallet addresses.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> when the wallet's services determine that an input address of a specific transaction corresponds to an address managed by this wallet.</p>
+<p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="4"><strong sourcefile="api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="4">UI Usage:</strong> User interfaces can subscribe to this event to:</p>
+<ul><li>Identify transactions where funds are being sent from the user's wallet.</li><li>Update transaction displays to visually distinguish outgoing transactions based on user-owned input addresses.</li><li>Potentially calculate and display the amount sent in outgoing transactions.</li></ul>
+<p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="7">Subscribers can listen for this event to track and react to transactions where the wallet's addresses are used as inputs, indicating funds are being spent from the wallet.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.html">TxOutputAddrMarkedAsUserAddrEventArgs</a></dt>
+      <dd><p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="1">Event arguments for when an output address in a transaction is identified as belonging to the user's wallet addresses.
+This event is published via the <a class="xref" href="BtcWalletLibrary.Interfaces.IEventDispatcher.html">IEventDispatcher</a> when the wallet's services determine that an output address of a specific transaction corresponds to an address managed by this wallet.</p>
+<p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="4"><strong sourcefile="api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="4">UI Usage:</strong> User interfaces can subscribe to this event to:</p>
+<ul><li>Identify transactions where funds are being sent to the user's wallet (incoming transactions).</li><li>Update transaction displays to visually distinguish incoming transactions based on user-owned output addresses.</li><li>Calculate and display the amount received in incoming transactions.</li></ul>
+<p sourcefile="api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml" sourcestartlinenumber="7">Subscribers can listen for this event to track and react to transactions where the wallet's addresses are used as outputs, indicating funds are being received by the wallet.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

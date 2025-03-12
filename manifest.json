@@ -1,0 +1,788 @@
+{
+  "source_base_path": "C:/Users/Ramazan/source/repos/App3/BtcWalletLibrary/src/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Configuration.BlockchainTxFeeApiConfigSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Configuration.BlockchainTxFeeApiConfigSection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Configuration.BlockchainTxFeeApiConfigSection",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Configuration.BlockchainTxFeeApiConfigSection.yml\" sourcestartlinenumber=\"1\">Represents the configuration section for the Blockchain transaction fee API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Configuration.NetworkType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Configuration.NetworkType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Configuration.NetworkType",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Configuration.NetworkType.yml\" sourcestartlinenumber=\"1\">Enum representing Bitcoin network types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Configuration.NodeConfigSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Configuration.NodeConfigSection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Configuration.NodeConfigSection",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Configuration.NodeConfigSection.yml\" sourcestartlinenumber=\"1\">Represents the configuration section for the Bitcoin node.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Configuration.WalletConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Configuration.WalletConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Configuration.WalletConfig",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Configuration.WalletConfig.yml\" sourcestartlinenumber=\"1\">Represents the overall wallet configuration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Configuration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Configuration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.DTOs.Responses.TransactionFetchResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.DTOs.Responses.TransactionFetchResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.DTOs.Responses.TransactionFetchResult",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.DTOs.Responses.TransactionFetchResult.yml\" sourcestartlinenumber=\"1\">Represents the result of a wallet transaction fetching operation.\nFetched transactions are published individually via the EventDispatcher (since they are processed in parallel).\nTo access complete transaction lists, use the TxHistoryService's Transactions property.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.DTOs.Responses.TransferResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.DTOs.Responses.TransferResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.DTOs.Responses.TransferResult",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.DTOs.Responses.TransferResult.yml\" sourcestartlinenumber=\"1\">Represents the result of a transfer operation after sending bitcoins to a recipient.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.DTOs.Responses.TxFeeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.DTOs.Responses.TxFeeResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.DTOs.Responses.TxFeeResult",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.DTOs.Responses.TxFeeResult.yml\" sourcestartlinenumber=\"1\">Represents the result of a transaction fee retrieval operation.\nThis class encapsulates the outcome of attempting to fetch or calculate a transaction fee, including success status, whether a default fee was used, the fee amount, and any error messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.DTOs.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.DTOs.Responses.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.DTOs.Responses",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when transaction fetching for a specific address is completed.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> after the wallet has finished fetching transaction history for a single Bitcoin address.\nNote that addresses are queried individually for their transaction history, such as during wallet synchronization or initial address discovery.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when the wallet's balance is updated.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> <strong sourcefile=\"api/BtcWalletLibrary.Events.Arguments.BalanceUpdatedEventArgs.yml\" sourcestartlinenumber=\"2\">after the wallet's balance has been recalculated.</strong>\nBalance recalculation is triggered by processing transaction fetching events, such as <xref href=\"BtcWalletLibrary.Events.Arguments.AddressTxsFetchedEventArgs\" data-throw-if-not-resolved=\"false\"></xref>.\nThe event is published by services like the <xref href=\"BtcWalletLibrary.Interfaces.IBalanceService\" data-throw-if-not-resolved=\"false\"></xref> when it has updated the wallet's balance based on new transaction data.\nSubscribers can listen for this event to update their UI or application state to reflect the latest confirmed and unconfirmed wallet balances.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.FetchingCompletedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when a fetching process of all addresses inside wallet is completed.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> to signal the completion of a data fetching / synchronizing  operation of the wallet transactions.\nSubscribers can listen for this event to be notified when a fetching process has finished.\n!!! Note that you need to wait for this event to be raised before sending a new transaction, to ensure that the wallet is up-to-date.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.FetchingStartedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when a process of  fetching all addresses inside wallet is completed.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> to signal the beginning of a data fetching / synchronizing  operation of the wallet transactions.\nSubscribers can listen for this event to be notified when a fetching process commences.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.NewAddressesFoundEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments base class for events indicating that new addresses have been found (derived and added to the wallet's address lists).\nThis is an abstract base class; concrete implementations like <xref href=\"BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs\" data-throw-if-not-resolved=\"false\"></xref> are used for specific address types.\nThese events are published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.NewChangeAddressesFoundEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when new change addresses have been found and added to the wallet.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref>  during initial address discovery or gap limit handling.\nSubscribers can listen for this event to be notified when the wallet expands its set of available change addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.NewMainAddressesFoundEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when new main (receiving) addresses have been found and added to the wallet.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> during initial address discovery or gap limit handling.\nSubscribers can listen for this event to be notified when the wallet expands its set of available main addresses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TransactionAddedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when a new Bitcoin transaction is added to the wallet's transaction history.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> after a new transaction is discovered or synchronized with the blockchain and added to the local storage.\nSubscribers can listen for this event to be notified of newly added transactions, enabling real-time updates to the user interface or application logic.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TransactionBroadcastedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when a transaction is successfully broadcasted to the Bitcoin network.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> after the wallet has successfully submitted a transaction to the Bitcoin network for broadcasting.\nSubscribers can listen for this event (to update UI e.g.) to be notified when a transaction initiated by the wallet is successfully sent.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TransactionConfirmedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when a transaction is considered confirmed on the Bitcoin network.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> when a transaction, relevant to the wallet, reaches a certain confirmation threshold on the blockchain.\nSubscribers can listen for this event(e.g. to Update UI) to be notified when a transaction's status changes to confirmed, indicating a higher degree of security and finality.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TransactionDateUpdatedEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when the date of a transaction is updated in the wallet's transaction history.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> when the date associated with a transaction is updated  due to synchronization with the blockchain.\nSubscribers can listen for this event to update transaction displays or time-sensitive logic based on the corrected transaction date.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when an input address in a transaction is identified as belonging to the user's wallet addresses.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> when the wallet's services determine that an input address of a specific transaction corresponds to an address managed by this wallet.</p>\n<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"4\"><strong sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"4\">UI Usage:</strong> User interfaces can subscribe to this event to:</p>\n<ul><li>Identify transactions where funds are being sent from the user's wallet.</li><li>Update transaction displays to visually distinguish outgoing transactions based on user-owned input addresses.</li><li>Potentially calculate and display the amount sent in outgoing transactions.</li></ul>\n<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxInputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"7\">Subscribers can listen for this event to track and react to transactions where the wallet's addresses are used as inputs, indicating funds are being spent from the wallet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"1\">Event arguments for when an output address in a transaction is identified as belonging to the user's wallet addresses.\nThis event is published via the <xref href=\"BtcWalletLibrary.Interfaces.IEventDispatcher\" data-throw-if-not-resolved=\"false\"></xref> when the wallet's services determine that an output address of a specific transaction corresponds to an address managed by this wallet.</p>\n<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"4\"><strong sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"4\">UI Usage:</strong> User interfaces can subscribe to this event to:</p>\n<ul><li>Identify transactions where funds are being sent to the user's wallet (incoming transactions).</li><li>Update transaction displays to visually distinguish incoming transactions based on user-owned output addresses.</li><li>Calculate and display the amount received in incoming transactions.</li></ul>\n<p sourcefile=\"api/BtcWalletLibrary.Events.Arguments.TxOutputAddrMarkedAsUserAddrEventArgs.yml\" sourcestartlinenumber=\"7\">Subscribers can listen for this event to track and react to transactions where the wallet's addresses are used as outputs, indicating funds are being received by the wallet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Events.Arguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Events.Arguments.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Events.Arguments",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.OperationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.OperationError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions.OperationError",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Exceptions.OperationError.yml\" sourcestartlinenumber=\"1\">Base class for representing operation error messages within the BtcWalletLibrary.\nThis class provides a common structure for encapsulating error details as objects, allowing for more type-safe and organized error handling compared to using plain strings for error messages.\nDerived classes, such as <xref href=\"BtcWalletLibrary.Exceptions.TransactionFeeError\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"BtcWalletLibrary.Exceptions.TransferError\" data-throw-if-not-resolved=\"false\"></xref>, can inherit from this class to represent specific types of errors with potentially additional properties in the future.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.TransactionBuildError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.TransactionBuildError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions.TransactionBuildError",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Exceptions.TransactionBuildError.yml\" sourcestartlinenumber=\"1\">Represents an error message specific to Bitcoin transaction building operations.\nThis class inherits from <xref href=\"BtcWalletLibrary.Exceptions.OperationError\" data-throw-if-not-resolved=\"false\"></xref> and is used to provide detailed error information when the process of building a Bitcoin transaction (e.g., coin selection, output creation, fee calculation) fails.\nInstances of this class are used to indicate specific transaction building errors and can be used to provide user-friendly error messages or for logging and debugging purposes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions.TransactionBuildErrorCode",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.yml\" sourcestartlinenumber=\"1\">Enumeration of error codes related to transaction building process.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.TransactionFeeError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.TransactionFeeError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions.TransactionFeeError",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Exceptions.TransactionFeeError.yml\" sourcestartlinenumber=\"1\">Represents an error message specific to transaction fee retrieval operations.\nThis class inherits from <xref href=\"BtcWalletLibrary.Exceptions.OperationError\" data-throw-if-not-resolved=\"false\"></xref> and is used to provide more specific error details when fetching or calculating transaction fees fails.\nInstances of this class are returned within the <xref href=\"BtcWalletLibrary.DTOs.Responses.TxFeeResult\" data-throw-if-not-resolved=\"false\"></xref> class, specifically in its <xref href=\"BtcWalletLibrary.DTOs.Responses.TxFeeResult.OperationError\" data-throw-if-not-resolved=\"false\"></xref> property, when a fee retrieval operation is unsuccessful.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.TransferError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.TransferError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions.TransferError",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Exceptions.TransferError.yml\" sourcestartlinenumber=\"1\">Represents an error message specific to Bitcoin transfer operations.\nThis class inherits from <xref href=\"BtcWalletLibrary.Exceptions.OperationError\" data-throw-if-not-resolved=\"false\"></xref> and is used to provide detailed error information when a Bitcoin transfer (sending funds) fails.\nInstances of this class are returned within the <xref href=\"BtcWalletLibrary.DTOs.Responses.TransferResult\" data-throw-if-not-resolved=\"false\"></xref> class, specifically in its <xref href=\"BtcWalletLibrary.DTOs.Responses.TransferResult.OperationError\" data-throw-if-not-resolved=\"false\"></xref> property, when a transfer operation is unsuccessful.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Exceptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.IAddressService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.IAddressService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.IAddressService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.IAddressService.yml\" sourcestartlinenumber=\"1\">Interface for services that manage Bitcoin addresses within the wallet.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.IBalanceService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.IBalanceService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.IBalanceService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.IBalanceService.yml\" sourcestartlinenumber=\"1\">Interface for services that manages and provides wallet balance information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ICommonService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ICommonService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ICommonService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ICommonService.yml\" sourcestartlinenumber=\"1\">Interface for common wallet services providing access to shared configurations and resources.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.IEventDispatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.IEventDispatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.IEventDispatcher",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.IEventDispatcher.yml\" sourcestartlinenumber=\"1\">Interface for an event dispatcher, enabling loosely coupled communication between components.\nThis interface allows for  subscribing/unsubscribing to specific event types in your ViewModels or other classes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ILoggingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ILoggingService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ILoggingService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITransferService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITransferService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITransferService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITransferService.yml\" sourcestartlinenumber=\"1\">Interface for services responsible for transferring Bitcoin, specifically broadcasting transactions to the network.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITxBuilderService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITxBuilderService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITxBuilderService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITxBuilderService.yml\" sourcestartlinenumber=\"1\">Interface for services responsible for building Bitcoin transactions.\nThis service handles the logic of constructing a transaction, including coin selection, fee calculation, and output creation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITxFeeService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITxFeeService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITxFeeService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITxFeeService.yml\" sourcestartlinenumber=\"1\">Interface for services responsible for calculating Bitcoin transaction fees.\nThis service provides functionalities to estimate transaction fees based on different parameters and retrieve fee recommendations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITxHistoryService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITxHistoryService",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITxHistoryService.yml\" sourcestartlinenumber=\"1\">Interface for services responsible for managing and synchronizing the wallet's transaction history.\nThis service provides access to the list of transactions and functionality to synchronize transaction history with the blockchain.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITxMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITxMapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITxMapper",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITxMapper.yml\" sourcestartlinenumber=\"1\">Interface for mapping Bitcoin transaction data between different formats and models.\nThis interface defines methods for converting transaction representations from external libraries (like NBitcoin)\ninto the library's internal models optimized for storage and processing (<xref href=\"BtcWalletLibrary.Models.Transaction\" data-throw-if-not-resolved=\"false\"></xref>) and for working with UTXOs.\nImplementations of this interface are responsible for handling the data transformation logic.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.ITxValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.ITxValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces.ITxValidator",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Interfaces.ITxValidator.yml\" sourcestartlinenumber=\"1\">Interface for validating various aspects of Bitcoin transactions before they are built or broadcasted.\nThis interface defines a set of methods to perform common validation checks on transaction-related data,\nsuch as recipient addresses, amounts, fees, and the sufficiency of funds.\nImplementations of this interface are responsible for enforcing transaction validity rules and providing\nspecific error codes via the <xref href=\"BtcWalletLibrary.Exceptions.TransactionBuildErrorCode\" data-throw-if-not-resolved=\"false\"></xref> enum when validation fails.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.Coin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.Coin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.Coin",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.Coin.yml\" sourcestartlinenumber=\"1\">Represents a Bitcoin Coin (UTXO) within the wallet library, extending the base <xref href=\"NBitcoin.Coin\" data-throw-if-not-resolved=\"false\"></xref> class with wallet-specific information.\nThis class inherits from <xref href=\"NBitcoin.Coin\" data-throw-if-not-resolved=\"false\"></xref> and adds a <xref href=\"BtcWalletLibrary.Models.Coin.Confirmed\" data-throw-if-not-resolved=\"false\"></xref> property to track the confirmation status of the UTXO.\nIt is used to represent spendable coins within the wallet, incorporating both the cryptographic details from NBitcoin and the wallet's internal tracking of confirmation status.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.Transaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.Transaction",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.Transaction.yml\" sourcestartlinenumber=\"1\">Represents a Bitcoin transaction within the wallet library.\nThis class models a Bitcoin transaction, encapsulating key details such as the raw transaction hex, date, transaction ID,\noutputs, inputs, and confirmation status. It implements the <xref href=\"System.ICloneable\" data-throw-if-not-resolved=\"false\"></xref> interface to allow for creating copies of transaction objects and is marked as <xref href=\"System.SerializableAttribute\" data-throw-if-not-resolved=\"false\"></xref> to enable serialization.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.TransactionInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.TransactionInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.TransactionInput",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.TransactionInput.yml\" sourcestartlinenumber=\"1\">Represents an input within a Bitcoin transaction.\nTransaction inputs detail the source of funds for a transaction, referencing outputs from previous transactions.\nThis class encapsulates the specifics of a transaction input, including the originating transaction, the output index being spent,\nthe associated address, user address status, and the amount contributed as input. Implements the <xref href=\"System.ICloneable\" data-throw-if-not-resolved=\"false\"></xref> interface and is <xref href=\"System.SerializableAttribute\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.TransactionOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.TransactionOutput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.TransactionOutput",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.TransactionOutput.yml\" sourcestartlinenumber=\"1\">Represents an output of a Bitcoin transaction.\nTransaction outputs define where bitcoins are sent as a result of a transaction. Each output specifies a destination address and the amount of bitcoins being transferred.\nThis class details the components of a transaction output, including the recipient's address, the value of bitcoins being sent, and whether the address belongs to the user's wallet.\nImplements the <xref href=\"System.ICloneable\" data-throw-if-not-resolved=\"false\"></xref> interface and is marked as <xref href=\"System.SerializableAttribute\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.UnspentCoin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.UnspentCoin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.UnspentCoin",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.UnspentCoin.yml\" sourcestartlinenumber=\"1\">Represents an Unspent Transaction Output (UTXO), also known as an unspent coin, in the Bitcoin system.\nUTXOs are the fundamental units of spendable Bitcoin. Each UTXO represents a certain amount of bitcoin\nthat is associated with a specific address and can be used as input in a new transaction.\nThis class encapsulates the key details of a UTXO, including its value, the transaction it originated from,\nthe address it is associated with, and its confirmation status on the blockchain.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.UtxoDetailsElectrumx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.UtxoDetailsElectrumx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models.UtxoDetailsElectrumx",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.Models.UtxoDetailsElectrumx.yml\" sourcestartlinenumber=\"1\">Represents detailed information about an Unspent Transaction Output (UTXO) as retrieved from an ElectrumX server.\nElectrumX is an open-source Electrum server implementation that provides APIs to query Bitcoin blockchain data.\nThis class encapsulates specific UTXO details obtained from ElectrumX, such as the transaction ID and position of the output,\nthe raw transaction hex, confirmation status, and the associated address.\nIt is used to represent UTXOs in a format compatible with data returned by ElectrumX.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.WalletInit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.WalletInit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary.WalletInit",
+      "Summary": "<p sourcefile=\"api/BtcWalletLibrary.WalletInit.yml\" sourcestartlinenumber=\"1\">Sets up the Bitcoin wallet library services for dependency injection.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BtcWalletLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BtcWalletLibrary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BtcWalletLibrary",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

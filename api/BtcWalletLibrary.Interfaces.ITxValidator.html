@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface ITxValidator | BtcWalletLibrary </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface ITxValidator | BtcWalletLibrary ">
+      
+      <meta name="description" content="Interface for validating various aspects of Bitcoin transactions before they are built or broadcasted. This interface defines a set of methods to perform common validation checks on transaction-related data, such as recipient addresses, amounts, fees, and the sufficiency of funds. Implementations of this interface are responsible for enforcing transaction validity rules and providing specific error codes via the  enum when validation fails.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ramazan199/BtcWalletLibrary/new/master/apiSpec/new?filename=BtcWalletLibrary_Interfaces_ITxValidator.md&amp;value=---%0Auid%3A%20BtcWalletLibrary.Interfaces.ITxValidator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="BtcWalletLibrary">
+            BtcWalletLibrary
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BtcWalletLibrary.Interfaces.ITxValidator">
+
+
+
+  <h1 id="BtcWalletLibrary_Interfaces_ITxValidator" data-uid="BtcWalletLibrary.Interfaces.ITxValidator" class="text-break">
+Interface ITxValidator  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BtcWalletLibrary.html">BtcWalletLibrary</a>.<a class="xref" href="BtcWalletLibrary.Interfaces.html">Interfaces</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BtcWalletLibrary.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Interface for validating various aspects of Bitcoin transactions before they are built or broadcasted.
+This interface defines a set of methods to perform common validation checks on transaction-related data,
+such as recipient addresses, amounts, fees, and the sufficiency of funds.
+Implementations of this interface are responsible for enforcing transaction validity rules and providing
+specific error codes via the <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> enum when validation fails.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITxValidator</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAddress_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAddress*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAddress_System_String_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAddress(System.String,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateAddress(string, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates a Bitcoin address string to ensure it is a valid and supported address format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateAddress(string destinationAddr, out TransactionBuildErrorCode txBuildErrorCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationAddr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The Bitcoin address string to validate.</p>
+</dd>
+    <dt><code>txBuildErrorCode</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the address is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAddress_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAddress*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAddress_System_String_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__NBitcoin_BitcoinAddress__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAddress(System.String,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@,NBitcoin.BitcoinAddress@)">
+  ValidateAddress(string, out TransactionBuildErrorCode, out BitcoinAddress)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates a Bitcoin address string and attempts to parse it into a <span class="xref">NBitcoin.BitcoinAddress</span> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateAddress(string destinationAddr, out TransactionBuildErrorCode txBuildErrorCode, out BitcoinAddress bitcoinDestinationAddr)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>destinationAddr</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The Bitcoin address string to validate.</p>
+</dd>
+    <dt><code>txBuildErrorCode</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+    <dt><code>bitcoinDestinationAddr</code> <span class="xref">BitcoinAddress</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be populated with the parsed <span class="xref">NBitcoin.BitcoinAddress</span> object if validation is successful.
+Will be null if validation fails.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the address is valid and parsed successfully, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAmount_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAmount*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAmount_NBitcoin_Money_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAmount(NBitcoin.Money,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateAmount(Money, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates an amount represented as <span class="xref">NBitcoin.Money</span> to ensure it is a valid Bitcoin amount.
+Checks for conditions such as negative amounts or amounts exceeding maximum limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateAmount(Money amount, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <span class="xref">Money</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The <span class="xref">NBitcoin.Money</span> amount to validate.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the amount is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAmount_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAmount*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateAmount_System_Decimal_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateAmount(System.Decimal,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateAmount(decimal, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates a decimal amount to ensure it is a valid Bitcoin amount.
+Checks for conditions such as negative amounts or amounts exceeding maximum limits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateAmount(decimal amount, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The decimal amount to validate.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the amount is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateCustomFee_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateCustomFee*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateCustomFee_NBitcoin_Money_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateCustomFee(NBitcoin.Money,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateCustomFee(Money, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates a custom fee amount provided as <span class="xref">NBitcoin.Money</span>.
+Checks if the custom fee is within acceptable ranges (e.g., non-negative).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateCustomFee(Money customFee, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customFee</code> <span class="xref">Money</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The <span class="xref">NBitcoin.Money</span> custom fee amount to validate.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the custom fee is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateCustomFee_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateCustomFee*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateCustomFee_System_Decimal_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateCustomFee(System.Decimal,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateCustomFee(decimal, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates a custom fee amount provided as a decimal.
+Checks if the custom fee is within acceptable ranges (e.g., non-negative).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateCustomFee(decimal customFee, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>customFee</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The decimal custom fee amount to validate.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the custom fee is valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateFundSufficiency_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateFundSufficiency*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateFundSufficiency_NBitcoin_Money_NBitcoin_Money_System_Collections_Generic_List_BtcWalletLibrary_Models_UnspentCoin__BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateFundSufficiency(NBitcoin.Money,NBitcoin.Money,System.Collections.Generic.List{BtcWalletLibrary.Models.UnspentCoin},BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateFundSufficiency(Money, Money, List&lt;UnspentCoin&gt;, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates if the selected unspent coins (<a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a>) are sufficient to cover the transaction amount and the transaction fee.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateFundSufficiency(Money amount, Money fee, List&lt;UnspentCoin&gt; selectedUnspentCoins, out TransactionBuildErrorCode txBuildErrorCode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <span class="xref">Money</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The transaction amount (excluding fee) as <span class="xref">NBitcoin.Money</span>.</p>
+</dd>
+    <dt><code>fee</code> <span class="xref">Money</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The transaction fee as <span class="xref">NBitcoin.Money</span>.</p>
+</dd>
+    <dt><code>selectedUnspentCoins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a>&gt;</dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The list of <a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a> objects selected for the transaction inputs.</p>
+</dd>
+    <dt><code>txBuildErrorCode</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_InsufficientFunds">InsufficientFunds</a> if funds are insufficient, or another relevant error code if validation fails for other reasons.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the selected unspent coins are sufficient, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateSelectedUnspentCoins_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateSelectedUnspentCoins*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateSelectedUnspentCoins_System_Collections_Generic_List_BtcWalletLibrary_Models_UnspentCoin__NBitcoin_Money_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateSelectedUnspentCoins(System.Collections.Generic.List{BtcWalletLibrary.Models.UnspentCoin},NBitcoin.Money,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateSelectedUnspentCoins(List&lt;UnspentCoin&gt;, Money, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates the selected unspent coins in relation to the specified transaction amount (<span class="xref">NBitcoin.Money</span>).
+This validation might include checks beyond fund sufficiency, such as ensuring that the selected coins are valid for the given amount in other transaction-specific ways if needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateSelectedUnspentCoins(List&lt;UnspentCoin&gt; selectedUnspentCoins, Money amount, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectedUnspentCoins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a>&gt;</dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The list of <a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a> objects selected for the transaction inputs.</p>
+</dd>
+    <dt><code>amount</code> <span class="xref">Money</span></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The transaction amount (excluding fee) as <span class="xref">NBitcoin.Money</span>.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the selected unspent coins are valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateSelectedUnspentCoins_" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateSelectedUnspentCoins*"></a>
+
+  <h3 id="BtcWalletLibrary_Interfaces_ITxValidator_ValidateSelectedUnspentCoins_System_Collections_Generic_List_BtcWalletLibrary_Models_UnspentCoin__System_Decimal_BtcWalletLibrary_Exceptions_TransactionBuildErrorCode__" data-uid="BtcWalletLibrary.Interfaces.ITxValidator.ValidateSelectedUnspentCoins(System.Collections.Generic.List{BtcWalletLibrary.Models.UnspentCoin},System.Decimal,BtcWalletLibrary.Exceptions.TransactionBuildErrorCode@)">
+  ValidateSelectedUnspentCoins(List&lt;UnspentCoin&gt;, decimal, out TransactionBuildErrorCode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Validates the selected unspent coins in relation to the specified transaction amount (decimal).
+This validation might include checks beyond fund sufficiency, such as ensuring that the selected coins are valid for the given amount in other transaction-specific ways if needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ValidateSelectedUnspentCoins(List&lt;UnspentCoin&gt; selectedUnspentCoins, decimal amount, out TransactionBuildErrorCode txBuildError)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>selectedUnspentCoins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a>&gt;</dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The list of <a class="xref" href="BtcWalletLibrary.Models.UnspentCoin.html">UnspentCoin</a> objects selected for the transaction inputs.</p>
+</dd>
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">The transaction amount (excluding fee) as a decimal.</p>
+</dd>
+    <dt><code>txBuildError</code> <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">Output parameter that will be set to a <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html">TransactionBuildErrorCode</a> value if validation fails.
+If validation is successful, this parameter may be set to <a class="xref" href="BtcWalletLibrary.Exceptions.TransactionBuildErrorCode.html#BtcWalletLibrary_Exceptions_TransactionBuildErrorCode_None">None</a> or left unchanged.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p sourcefile="api/BtcWalletLibrary.Interfaces.ITxValidator.yml" sourcestartlinenumber="1">True if the selected unspent coins are valid, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ramazan199/BtcWalletLibrary/blob/master/src/Interfaces/ITxValidator.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
