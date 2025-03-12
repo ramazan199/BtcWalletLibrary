@@ -14,9 +14,9 @@ Build Bitcoin wallets faster with a library that handles all backend complexitie
 ✅ Works with any .NET UI framework (MAUI, Xamarin, WinForms, etc.) and DI containers
 
 ## Documentation
-- [Introduction](docs/introduction.md)
-- [Getting Started](docs/getting-started.md)
-- [API Reference](api/BtcWalletLibrary.html)
+- [Introduction](https://ramazan199.github.io/BtcWalletLibrary/docs/introduction.html)
+- [Getting Started](https://ramazan199.github.io/BtcWalletLibrary/docs/getting-started.html)
+- [API Reference](https://ramazan199.github.io/BtcWalletLibrary/api/BtcWalletLibrary.html)
 
 ## Demo UI App
 This is a demo Bitcoin wallet project with a simple user interface, built to show how to integrate with the given BtcWalletLibrary: [Demo UI App](https://github.com/ramazan199/BtcWalletUI)
