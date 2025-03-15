@@ -4,7 +4,26 @@
     <TargetFramework>netstandard2.0</TargetFramework>
 	<LangVersion>9.0</LangVersion>
 	<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+	<Title>BtcWalletLibrary</Title>
+	<Authors>ramazan199</Authors>
+	<Description>Build Bitcoin wallets faster with a library that handles all backend complexities for you.</Description>
+	<PackageProjectUrl>https://ramazan199.github.io/BtcWalletLibrary/index.html</PackageProjectUrl>
+	<PackageIcon>btcWalletLibraryIcon.png</PackageIcon>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<RepositoryUrl>https://github.com/ramazan199/BtcWalletLibrary</RepositoryUrl>
+	<PackageTags>btc;wallet;ui automation;library</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Downloads\btcWalletLibraryIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ElectrumXClientUp" Version="1.0.2" />
@@ -15,9 +34,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="QBitNinja.Client" Version="1.0.3.52" />
     <PackageReference Include="SecureStorage" Version="1.24.3.14" />
-    <PackageReference Include="Serilog" Version="4.2.1-dev-02337" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
-    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

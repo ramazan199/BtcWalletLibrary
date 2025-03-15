@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using SecureStorage;
 
 namespace BtcWalletLibrary.Services.Adapters
@@ -30,34 +29,12 @@ namespace BtcWalletLibrary.Services.Adapters
 
         public void SaveObject(object obj, string key)
         {
-            try
-            {
-                _adaptee.SaveObject(obj, key);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Save failed: {ex.Message}");
-                throw; // Re-throw to avoid silent failures
-            }
+            _adaptee.SaveObject(obj, key);       
         }
 
         public object LoadObject(Type type, string key)
         {
-            try
-            {
-                return _adaptee.LoadObject(type, key);
-            }
-            catch (Exception ex)
-            {
-                // Log the error with details
-                Debug.WriteLine($"Failed to load object with key '{key}' and type '{type?.Name}': {ex.Message}");
-
-                // Optional: Return a default value (e.g., null) instead of throwing
-                // return null;
-
-                // Rethrow the exception if you want the caller to handle it
-                throw;
-            }
+            return _adaptee.LoadObject(type, key);
         }
 
         public void DeleteObject(Type type, string key)
